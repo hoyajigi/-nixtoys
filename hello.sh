@@ -26,6 +26,8 @@ elif [ -f /etc/debian_version ]; then
     OS=Debian  # XXX or Ubuntu??
     VER=$(cat /etc/debian_version)
     echo "Ubuntu"
+    sudo sed -i -e 's/us.archive\.ubuntu\.com/ftp\.daum\.net/g' /etc/apt/sources.list
+    sudo sed -i -e 's/kr.archive\.ubuntu\.com/ftp\.daum\.net/g' /etc/apt/sources.list
 elif [ -f /etc/redhat-release ]; then
     # TODO add code for Red Hat and CentOS here
     echo "CentOS"
