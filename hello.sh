@@ -36,7 +36,8 @@ elif [ -f /etc/debian_version ]; then
     sudo sed -i -e 's/kr.archive\.ubuntu\.com/ftp\.daum\.net/g' /etc/apt/sources.list
     sudo apt-get update;
     sudo apt-get upgrade -y;
-    sudo apt-get install python-software-properties -y;
+    sudo apt-get install python-software-properties python g++ make -y;
+    #sudo apt-get install python-software-properties -y;
     sudo add-apt-repository ppa:chris-lea/node.js  
     sudo apt-get update;
     sudo apt-get install nodejs npm -y;
