@@ -39,7 +39,7 @@ elif [ -f /etc/debian_version ]; then
     sudo apt-get install python-software-properties -y;
     sudo add-apt-repository ppa:chris-lea/node.js  
     sudo apt-get update;
-    sudo apt-get install nodejs -y;
+    sudo apt-get install nodejs npm -y;
 elif [ -f /etc/redhat-release ]; then
     # TODO add code for Red Hat and CentOS here
     echo "CentOS"
