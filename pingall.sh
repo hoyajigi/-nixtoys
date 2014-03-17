@@ -1,3 +1,5 @@
+#!/bin/sh
+
 ping -c 3 cubieuno.hoyajigi.com
 ping -c 3 cubiehana.hoyajigi.com
 ping -c 3 cubiedos.hoyajigi.com
