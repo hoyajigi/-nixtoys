@@ -59,9 +59,9 @@ fi
 # node.js 는 컴파일 해서 설치 한다.
 #
 cd /usr/local/src/
-wget http://nodejs.org/dist/v0.10.24/node-v0.10.24-linux-x64.tar.gz
-tar zxvf node-v0.10.24-linux-x64.tar.gz
-cd node-v0.10.24-linux-x64
+wget http://nodejs.org/dist/v0.10.26/node-v0.10.26.tar.gz
+tar zxvf node-v0.10.26.tar.gz
+cd node-v0.10.26
 ./configure
 make -j
 make install
