@@ -47,7 +47,7 @@ elif [ -f /etc/redhat-release ]; then
     yum update -y  
     yum install gcc-c++ gcc openssl-devel make git screen -y
 	echo -e "[mariadb]\nname = MariaDB\nbaseurl = http://yum.mariadb.org/5.5/centos5-x86\ngpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB\ngpgcheck=1" > /etc/yum.repos.d/MariaDB.repo
-	echo -e "[nginx]\nname=nginx repo\nbaseurl=http://nginx.org/packages/centos/$releasever/$basearch/\ngpgcheck=0\nenabled=1" > /etc/yum.repos.d/nginx.repo
+	echo -e "[nginx]\nname=nginx repo\nbaseurl=http://nginx.org/packages/centos/\$releasever/\$basearch/\ngpgcheck=0\nenabled=1" > /etc/yum.repos.d/nginx.repo
 	yum remove mysql-libs -y
 	yum install MariaDB-server MariaDB-client -y
 else
