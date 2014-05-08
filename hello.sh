@@ -53,6 +53,7 @@ elif [ -f /etc/redhat-release ]; then
     yum update -y  
     yum install gcc-c++ gcc openssl-devel make git screen -y
 	echo -e "[mariadb]\nname = MariaDB\nbaseurl = http://yum.mariadb.org/5.5/centos5-x86\ngpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB\ngpgcheck=1" > /etc/yum.repos.d/MariaDB.repo
+	echo -e "[nginx]\nname=nginx repo\nbaseurl=http://nginx.org/packages/centos/\$releasever/\$basearch/\ngpgcheck=0\nenabled=1" > /etc/yum.repos.d/nginx.repo
 	yum remove mysql-libs -y
 	yum install MariaDB-server MariaDB-client -y
 else
@@ -65,9 +66,9 @@ fi
 # node.js 는 컴파일 해서 설치 한다.
 #
 cd /usr/local/src/
-wget http://nodejs.org/dist/v0.10.24/node-v0.10.24-linux-x64.tar.gz
-tar zxvf node-v0.10.24-linux-x64.tar.gz
-cd node-v0.10.24-linux-x64
+wget http://nodejs.org/dist/v0.10.26/node-v0.10.26.tar.gz
+tar zxvf node-v0.10.26.tar.gz
+cd node-v0.10.26
 ./configure
 make -j
 make install
