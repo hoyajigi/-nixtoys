@@ -1,0 +1,5 @@
+if [ $# -ne 2 ]; then   
+  echo "Usage: swap file1 file2"
+else
+  mv "$1" tmp && mv "$2" "$1" && mv tmp "$2"
+fi

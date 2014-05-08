@@ -1,3 +1,9 @@
+# chef나 puppet 같은거 쓰지 왜 이런거 쓰니ㅠㅠ
+
+
+
+
+
 #
 # 01. 일단 비밀 번호부터 바꾸자.
 #
@@ -28,9 +34,19 @@ elif [ -f /etc/debian_version ]; then
     echo "Ubuntu"
     sudo sed -i -e 's/us.archive\.ubuntu\.com/ftp\.daum\.net/g' /etc/apt/sources.list
     sudo sed -i -e 's/kr.archive\.ubuntu\.com/ftp\.daum\.net/g' /etc/apt/sources.list
+<<<<<<< HEAD
     sudo apt-get update
     sudo apt-get upgrade -y;
     sudo apt-get install git sysstat subversion -y
+=======
+    sudo apt-get update;
+    sudo apt-get upgrade -y;
+    sudo apt-get install python-software-properties python g++ make -y;
+    #sudo apt-get install python-software-properties -y;
+    sudo add-apt-repository ppa:chris-lea/node.js  
+    sudo apt-get update;
+    sudo apt-get install nodejs -y;
+>>>>>>> 894db9073dae0d89275712cfa22ad6a5ade9a6de
 elif [ -f /etc/redhat-release ]; then
     # TODO add code for Red Hat and CentOS here
     echo "CentOS"
