@@ -1,0 +1,7 @@
+for d in ~/github.com/*; do
+ ( 
+	cd $d; 
+	git status
+ ) 
+done
+
